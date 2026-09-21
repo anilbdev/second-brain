@@ -10,6 +10,7 @@ Built on Cloudflare's stack as the take-home for a Software Engineer role.
 **Live demo:** https://second-brain.anilbdev.workers.dev
 
 ---
+<img width="1464" height="797" alt="2026-09-21_18-26-54" src="https://github.com/user-attachments/assets/4f3e53f0-fb9a-458e-924f-bb2f58342482" />
 
 ## What's in the box
 
