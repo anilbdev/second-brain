@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Second Brain</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <header class="sidebar-head">
+        <h1>Second Brain</h1>
+        <p class="tagline">Notes in. Answers out.</p>
+      </header>
+
+      <section class="ingest">
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="url" role="tab">URL</button>
+          <button class="tab" data-tab="text" role="tab">Text</button>
+        </div>
+        <div class="tab-panel" data-panel="url">
+          <input
+            id="url-input"
+            type="url"
+            placeholder="https://example.com/article"
+          />
+          <button id="ingest-url" class="primary">Ingest URL</button>
+        </div>
+        <div class="tab-panel hidden" data-panel="text">
+          <input
+            id="text-title"
+            type="text"
+            placeholder="Title (optional)"
+          />
+          <textarea
+            id="text-input"
+            rows="6"
+            placeholder="Paste notes, an article, meeting minutes..."
+          ></textarea>
+          <button id="ingest-text" class="primary">Ingest Text</button>
+        </div>
+      </section>
+
+      <section class="notes">
+        <h2>Notes <span id="notes-count" class="badge">0</span></h2>
+        <ul id="notes-list" class="notes-list"></ul>
+      </section>
+
+      <footer class="sidebar-foot">
+        <button id="clear-history" class="link">Clear conversation</button>
+      </footer>
+    </aside>
+
+    <main class="chat">
+      <div id="messages" class="messages">
+        <div class="empty">
+          <h2>Ask anything about your notes.</h2>
+          <p>
+            Ingest a URL or paste text on the left, then ask questions grounded
+            in your own material.
+          </p>
+          <ul class="suggestions">
+            <li>&ldquo;What are the main points from the notes I added?&rdquo;</li>
+            <li>&ldquo;Compare X and Y across my notes.&rdquo;</li>
+            <li>&ldquo;What do I already know about topic Z?&rdquo;</li>
+          </ul>
+        </div>
+      </div>
+
+      <form id="chat-form" class="composer">
+        <input
+          id="chat-input"
+          type="text"
+          placeholder="Ask your second brain..."
+          autocomplete="off"
+        />
+        <button type="submit" class="primary">Send</button>
+      </form>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
